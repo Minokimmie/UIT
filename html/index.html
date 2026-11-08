@@ -1,379 +1,544 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Trường Đại học Công nghệ thông tin - Đại học Quốc gia Thành phố Hồ Chí Minh</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link href="/css/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trường Đại học Công nghệ thông tin - Đại học Quốc gia Thành phố Hồ Chí Minh</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
 </head>
+
 <body>
 
-<!-- ================= TOP BAR ================= -->
-<div class="uit-topbar text-white small">
-  <div class="container-xxl d-flex justify-content-end align-items-center gap-4">
-    <nav class="d-none d-lg-flex gap-5" aria-label="Liên kết nhanh">
-      <a href="https://www.uit.edu.vn/" class="text-white text-decoration-none">Trang chủ</a>
-      <a href="https://portal.uit.edu.vn/sinh-vien/" class="text-white text-decoration-none">Sinh viên</a>
-      <a href="https://portal.uit.edu.vn/vc-nld" class="text-white text-decoration-none">Nhân viên</a>
-      <a href="https://alumni.uit.edu.vn/" class="text-white text-decoration-none">Cựu sinh viên</a>
+    <!-- ================= TOP BAR ================= -->
+    <div class="uit-topbar text-white small">
+        <div class="container-xxl d-flex justify-content-end align-items-center gap-4">
+            <nav class="d-none d-lg-flex gap-5" aria-label="Liên kết nhanh">
+                <a href="https://www.uit.edu.vn/" class="text-white text-decoration-none">Trang chủ</a>
+                <a href="https://portal.uit.edu.vn/sinh-vien/" class="text-white text-decoration-none">Sinh viên</a>
+                <a href="https://portal.uit.edu.vn/vc-nld" class="text-white text-decoration-none">Nhân viên</a>
+                <a href="https://alumni.uit.edu.vn/" class="text-white text-decoration-none">Cựu sinh viên</a>
+            </nav>
+            <div class="d-flex align-items-center gap-3">
+                <button class="btn btn-link text-white p-0" aria-label="Lịch"><i
+                        class="bi bi-calendar-event-fill"></i></button>
+                <button class="btn btn-link text-white p-0" aria-label="Tìm kiếm"><i class="bi bi-search"></i></button>
+                <div class="dropdown uit-lang">
+                    <button
+                        class="btn btn-link text-white p-0 fw-semibold text-decoration-none dropdown-toggle d-flex align-items-center gap-2"
+                        data-bs-toggle="dropdown" aria-expanded="false" aria-label="Chọn ngôn ngữ">
+                        <span class="uit-flag"></span> VI
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center gap-2 active" href="#">
+                                <span class="uit-flag"></span> Tiếng Việt <i class="bi bi-check2 ms-auto"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center gap-2" href="#">
+                                <span class="uit-flag uit-flag--en"></span> English
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= MAIN NAV ================= -->
+    <nav class="navbar navbar-expand-lg bg-white sticky-top uit-nav">
+        <div class="container-xxl">
+            <a class="navbar-brand py-2" href="https://www.uit.edu.vn/">
+                <img src="https://www.uit.edu.vn/_next/image?url=%2Fmedia%2FLOGO_VNA_c054066f11_7d72ba6441.png&w=1536&q=100"
+                    alt="Trường Đại học Công nghệ Thông tin - ĐHQG-HCM" class="uit-logo">
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#uitMenu"
+                aria-controls="uitMenu" aria-expanded="false" aria-label="Mở menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="uitMenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Về UIT</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"
+                                    href="https://www.uit.edu.vn/bai-viet/tong-quan-ve-truong-dh-cong-nghe-thong-tin">Tổng
+                                    quan</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://www.uit.edu.vn/bai-viet/tam-nhin-su-mang-va-gia-tri-cot-loi">Tầm nhìn,
+                                    Sứ mạng và Giá trị cốt lõi</a></li>
+                            <li><a class="dropdown-item" href="https://www.uit.edu.vn/bai-viet/co-cau-to-chuc">Sơ đồ cơ
+                                    cấu tổ chức</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://www.uit.edu.vn/bai-viet/nhan-dien-thuong-hieu">Nhận diện thương
+                                    hiệu</a></li>
+                            <li><a class="dropdown-item" href="https://www.uit.edu.vn/bai-viet/chien-luoc-phat-trien">Kế
+                                    hoạch - Chiến lược</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://www.uit.edu.vn/bai-viet/thong-tin-quy-hoach-truong-dh-cntt-dhqg-hcm">Thông
+                                    tin quy hoạch</a></li>
+                            <li><a class="dropdown-item" href="https://www.uit.edu.vn/bai-viet/dam-bao-chat-luong">Đảm
+                                    bảo chất lượng</a></li>
+                            <li><a class="dropdown-item" href="#">Nghiên cứu Khoa học</a></li>
+                            <li><a class="dropdown-item" href="https://www.uit.edu.vn/bai-viet/lien-he">Liên hệ</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="https://tuyensinh.uit.edu.vn/">Tuyển sinh</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Tuyển dụng</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="https://www.uit.edu.vn/tuyen-dung">Người lao động</a>
+                            </li>
+                            <li><a class="dropdown-item" href="https://www.uit.edu.vn/tuyen-dung-vien-chuc">Viên
+                                    chức</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Tin tức &amp; sự kiện</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <h6 class="dropdown-header">Thông tin chung</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="https://www.uit.edu.vn/thong-tin-thong-bao">Thông báo
+                                    chung</a></li>
+                            <li><a class="dropdown-item" href="https://tuyensinh.uit.edu.vn/">Thông tin tuyển sinh</a>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="https://www.uit.edu.vn/tin-xet-duyet-chuc-danh-gs-pgs">Tin xét duyệt chức danh
+                                    GS, PGS</a></li>
+                            <li><a class="dropdown-item" href="https://www.uit.edu.vn/thu-chao-gia">Thư chào giá</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Tin tức</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="https://www.uit.edu.vn/tin-uit">Tin tức UIT</a></li>
+                            <li><a class="dropdown-item" href="https://www.uit.edu.vn/hoc-tap-nghien-cuu">Tin học tập -
+                                    nghiên cứu</a></li>
+                            <li><a class="dropdown-item" href="https://www.uit.edu.vn/hoat-dong-sinh-vien">Tin hoạt động
+                                    sinh viên</a></li>
+                            <li><a class="dropdown-item" href="https://www.uit.edu.vn/uit-20-nam">UIT 20 năm</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Đào tạo</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <h6 class="dropdown-header">Đại học chính quy</h6>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="https://tuyensinh.uit.edu.vn/nganh-dao-tao/nganh-cong-nghe-thong-tin">Công
+                                    nghệ Thông tin</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://tuyensinh.uit.edu.vn/nganh-dao-tao/nganh-he-thong-thong-tin">Hệ thống
+                                    Thông tin</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://tuyensinh.uit.edu.vn/nganh-dao-tao/nganh-khoa-hoc-may-tinh">Khoa học
+                                    Máy tính</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://tuyensinh.uit.edu.vn/nganh-dao-tao/nganh-ky-thuat-phan-mem">Kỹ thuật
+                                    Phần mềm</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://tuyensinh.uit.edu.vn/nganh-dao-tao/nganh-ky-thuat-may-tinh">Kỹ thuật
+                                    Máy tính</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://tuyensinh.uit.edu.vn/nganh-dao-tao/nganh-an-toan-thong-tin">An toàn
+                                    Thông tin</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://tuyensinh.uit.edu.vn/nganh-dao-tao/nganh-tri-tue-nhan-tao">Trí tuệ
+                                    Nhân tạo</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Sau đại học</h6>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="https://www.uit.edu.vn/bai-viet/dao-tao-thac-si-khoa-hoc-may-tinh">Thạc sĩ
+                                    Khoa học Máy tính</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://www.uit.edu.vn/bai-viet/dao-tao-tien-si-khoa-hoc-may-tinh">Tiến sĩ
+                                    Khoa học Máy tính</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">Đào tạo quốc tế</h6>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="https://oep.uit.edu.vn/vi/tong-quan-chuong-trinh-giang-day-bang-tieng-anh">Chương
+                                    trình giảng dạy bằng tiếng Anh</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://oep.uit.edu.vn/vi/tong-quan-ve-chuong-trinh-lien-ket-bcu">Liên kết Đại
+                                    học Birmingham City</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://oep.uit.edu.vn/vi/chuong-trinh-lien-ket-dai-hoc-newcastle">Liên kết
+                                    Đại học Newcastle</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Tra cứu</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="https://www.uit.edu.vn/cong-bo-ba-cong-khai">Công bố ba
+                                    công khai</a></li>
+                            <li><a class="dropdown-item" href="https://www.uit.edu.vn/tra-cuu/van-bang">Văn bằng tốt
+                                    nghiệp</a></li>
+                            <li><a class="dropdown-item" href="https://tracuu.citd.edu.vn/">Chứng chỉ Công nghệ Thông
+                                    tin</a></li>
+                            <li><a class="dropdown-item" href="https://www.uit.edu.vn/bang-vang-sinh-vien">Bảng vàng
+                                    thành tích</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
-    <div class="d-flex align-items-center gap-3">
-      <button class="btn btn-link text-white p-0" aria-label="Lịch"><i class="bi bi-calendar-event-fill"></i></button>
-      <button class="btn btn-link text-white p-0" aria-label="Tìm kiếm"><i class="bi bi-search"></i></button>
-      <div class="dropdown">
-        <button class="btn btn-link text-white p-0 fw-semibold text-decoration-none dropdown-toggle d-flex align-items-center gap-2" data-bs-toggle="dropdown" aria-expanded="false">
-          <span class="uit-flag"></span> VI
-        </button>
-        <ul class="dropdown-menu dropdown-menu-end">
-          <li><a class="dropdown-item" href="#">Tiếng Việt</a></li>
-          <li><a class="dropdown-item" href="#">English</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
 
-<!-- ================= MAIN NAV ================= -->
-<nav class="navbar navbar-expand-lg bg-white sticky-top uit-nav">
-  <div class="container-xxl">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="https://www.uit.edu.vn/">
-      <!-- Thay bằng <img src="logo.png" alt="UIT" height="40"> khi có logo thật -->
-      <span class="uit-logo-20">2<span>0</span></span>
-      <span class="d-flex flex-column lh-sm uit-logo-text">
-        <small>ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH</small>
-        <strong>TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN</strong>
-      </span>
-    </a>
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#uitMenu" aria-controls="uitMenu" aria-expanded="false" aria-label="Mở menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <main>
 
-    <div class="collapse navbar-collapse justify-content-end" id="uitMenu">
-      <ul class="navbar-nav">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Về UIT</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="https://www.uit.edu.vn/bai-viet/tong-quan-ve-truong-dh-cong-nghe-thong-tin">Tổng quan</a></li>
-            <li><a class="dropdown-item" href="https://www.uit.edu.vn/bai-viet/tam-nhin-su-mang-va-gia-tri-cot-loi">Tầm nhìn, Sứ mạng và Giá trị cốt lõi</a></li>
-            <li><a class="dropdown-item" href="https://www.uit.edu.vn/bai-viet/co-cau-to-chuc">Sơ đồ cơ cấu tổ chức</a></li>
-            <li><a class="dropdown-item" href="https://www.uit.edu.vn/bai-viet/nhan-dien-thuong-hieu">Nhận diện thương hiệu</a></li>
-            <li><a class="dropdown-item" href="https://www.uit.edu.vn/bai-viet/chien-luoc-phat-trien">Kế hoạch - Chiến lược</a></li>
-            <li><a class="dropdown-item" href="https://www.uit.edu.vn/bai-viet/thong-tin-quy-hoach-truong-dh-cntt-dhqg-hcm">Thông tin quy hoạch</a></li>
-            <li><a class="dropdown-item" href="https://www.uit.edu.vn/bai-viet/dam-bao-chat-luong">Đảm bảo chất lượng</a></li>
-            <li><a class="dropdown-item" href="#">Nghiên cứu Khoa học</a></li>
-            <li><a class="dropdown-item" href="https://www.uit.edu.vn/bai-viet/lien-he">Liên hệ</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item"><a class="nav-link" href="https://tuyensinh.uit.edu.vn/">Tuyển sinh</a></li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tuyển dụng</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="https://www.uit.edu.vn/tuyen-dung">Người lao động</a></li>
-            <li><a class="dropdown-item" href="https://www.uit.edu.vn/tuyen-dung-vien-chuc">Viên chức</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tin tức &amp; sự kiện</a>
-          <ul class="dropdown-menu">
-            <li><h6 class="dropdown-header">Thông tin chung</h6></li>
-            <li><a class="dropdown-item" href="https://www.uit.edu.vn/thong-tin-thong-bao">Thông báo chung</a></li>
-            <li><a class="dropdown-item" href="https://tuyensinh.uit.edu.vn/">Thông tin tuyển sinh</a></li>
-            <li><a class="dropdown-item" href="https://www.uit.edu.vn/tin-xet-duyet-chuc-danh-gs-pgs">Tin xét duyệt chức danh GS, PGS</a></li>
-            <li><a class="dropdown-item" href="https://www.uit.edu.vn/thu-chao-gia">Thư chào giá</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><h6 class="dropdown-header">Tin tức</h6></li>
-            <li><a class="dropdown-item" href="https://www.uit.edu.vn/tin-uit">Tin tức UIT</a></li>
-            <li><a class="dropdown-item" href="https://www.uit.edu.vn/hoc-tap-nghien-cuu">Tin học tập - nghiên cứu</a></li>
-            <li><a class="dropdown-item" href="https://www.uit.edu.vn/hoat-dong-sinh-vien">Tin hoạt động sinh viên</a></li>
-            <li><a class="dropdown-item" href="https://www.uit.edu.vn/uit-20-nam">UIT 20 năm</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Đào tạo</a>
-          <ul class="dropdown-menu">
-            <li><h6 class="dropdown-header">Đại học chính quy</h6></li>
-            <li><a class="dropdown-item" href="https://tuyensinh.uit.edu.vn/nganh-dao-tao/nganh-cong-nghe-thong-tin">Công nghệ Thông tin</a></li>
-            <li><a class="dropdown-item" href="https://tuyensinh.uit.edu.vn/nganh-dao-tao/nganh-he-thong-thong-tin">Hệ thống Thông tin</a></li>
-            <li><a class="dropdown-item" href="https://tuyensinh.uit.edu.vn/nganh-dao-tao/nganh-khoa-hoc-may-tinh">Khoa học Máy tính</a></li>
-            <li><a class="dropdown-item" href="https://tuyensinh.uit.edu.vn/nganh-dao-tao/nganh-ky-thuat-phan-mem">Kỹ thuật Phần mềm</a></li>
-            <li><a class="dropdown-item" href="https://tuyensinh.uit.edu.vn/nganh-dao-tao/nganh-ky-thuat-may-tinh">Kỹ thuật Máy tính</a></li>
-            <li><a class="dropdown-item" href="https://tuyensinh.uit.edu.vn/nganh-dao-tao/nganh-an-toan-thong-tin">An toàn Thông tin</a></li>
-            <li><a class="dropdown-item" href="https://tuyensinh.uit.edu.vn/nganh-dao-tao/nganh-tri-tue-nhan-tao">Trí tuệ Nhân tạo</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><h6 class="dropdown-header">Sau đại học</h6></li>
-            <li><a class="dropdown-item" href="https://www.uit.edu.vn/bai-viet/dao-tao-thac-si-khoa-hoc-may-tinh">Thạc sĩ Khoa học Máy tính</a></li>
-            <li><a class="dropdown-item" href="https://www.uit.edu.vn/bai-viet/dao-tao-tien-si-khoa-hoc-may-tinh">Tiến sĩ Khoa học Máy tính</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><h6 class="dropdown-header">Đào tạo quốc tế</h6></li>
-            <li><a class="dropdown-item" href="https://oep.uit.edu.vn/vi/tong-quan-chuong-trinh-giang-day-bang-tieng-anh">Chương trình giảng dạy bằng tiếng Anh</a></li>
-            <li><a class="dropdown-item" href="https://oep.uit.edu.vn/vi/tong-quan-ve-chuong-trinh-lien-ket-bcu">Liên kết Đại học Birmingham City</a></li>
-            <li><a class="dropdown-item" href="https://oep.uit.edu.vn/vi/chuong-trinh-lien-ket-dai-hoc-newcastle">Liên kết Đại học Newcastle</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tra cứu</a>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="https://www.uit.edu.vn/cong-bo-ba-cong-khai">Công bố ba công khai</a></li>
-            <li><a class="dropdown-item" href="https://www.uit.edu.vn/tra-cuu/van-bang">Văn bằng tốt nghiệp</a></li>
-            <li><a class="dropdown-item" href="https://tracuu.citd.edu.vn/">Chứng chỉ Công nghệ Thông tin</a></li>
-            <li><a class="dropdown-item" href="https://www.uit.edu.vn/bang-vang-sinh-vien">Bảng vàng thành tích</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<main>
-
-  <!-- ================= BANNER TRƯỢT ================= -->
-  <section id="heroCarousel" class="carousel slide" data-bs-ride="carousel" aria-label="Banner">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active"><img class="d-block w-100" src="https://www.uit.edu.vn/media/tamnhin_sumang_02_02_01_01_e7496ca052.png" alt="Tầm nhìn, sứ mạng"></div>
-      <div class="carousel-item"><img class="d-block w-100" src="https://www.uit.edu.vn/media/uit_bannerweb_20nam_02_02_01_fc29c35461.png" alt="UIT 20 - Kiến tạo tương lai số"></div>
-      <div class="carousel-item"><img class="d-block w-100" src="https://www.uit.edu.vn/media/uit_bannerweb_tuyensinh_02_02_01_7b375db85c.png" alt="UIT môi trường Đại học đáng mơ ước"></div>
-      <div class="carousel-item"><img class="d-block w-100" src="https://www.uit.edu.vn/media/uit_bannerweb_gioithieu_02_9ed76ed0ba.jpg" alt="Triết lý"></div>
-      <div class="carousel-item"><img class="d-block w-100" src="https://www.uit.edu.vn/media/banner_kiem_dinh_ae8a551e0a.png" alt="ASIIN"></div>
-      <div class="carousel-item"><img class="d-block w-100" src="https://www.uit.edu.vn/media/M01_1043_7dd2d68bd4.jpg" alt="Tuyển dụng đợt 1 năm 2026"></div>
-      <div class="carousel-item"><img class="d-block w-100" src="https://www.uit.edu.vn/media/a3e02b776dd1e38fbac0_317f2dbcb8.jpg" alt="Ranking"></div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous slide</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next slide</span>
-    </button>
-  </section>
-
-  <h1 class="visually-hidden">Trường Đại học Công nghệ thông tin - Đại học Quốc gia Thành phố Hồ Chí Minh</h1>
-
-  <!-- ================= GIỚI THIỆU ================= -->
-  <section class="py-5 bg-white">
-    <div class="container-xxl">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <h2 class="uit-lead mb-3">Nơi đào tạo nguồn nhân lực chất lượng cao, tiên phong trong nghiên cứu khoa học, đổi mới sáng tạo và chuyển giao công nghệ.</h2>
-          <p class="text-secondary">Trường Đại học Công nghệ Thông tin – ĐHQG TP.HCM hướng đến việc xây dựng môi trường học tập và nghiên cứu toàn diện, nơi mỗi sinh viên được phát triển không chỉ về chuyên môn mà còn về tư duy, kỹ năng và giá trị cộng đồng. Nhà trường đề cao tinh thần sáng tạo, tự do học thuật, chuyên nghiệp trong mọi hoạt động, đồng thời gắn kết tri thức với trách nhiệm xã hội – hướng đến sự phát triển bền vững của cộng đồng và đất nước.</p>
-          <a href="https://www.uit.edu.vn/bai-viet/tong-quan-ve-truong-dh-cong-nghe-thong-tin" class="btn uit-btn">Tìm hiểu thêm về chúng tôi</a>
-        </div>
-        <div class="col-lg-6">
-          <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow">
-            <iframe src="https://www.youtube-nocookie.com/embed/4x8gqJeU5D0?rel=0" title="Giới thiệu UIT" allowfullscreen loading="lazy"></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= ĐÔI NÉT VỀ UIT ================= -->
-  <section class="py-5 uit-about">
-    <div class="container-xxl">
-      <div class="text-center mb-4">
-        <h2 class="uit-title">Đôi nét về UIT</h2>
-        <p class="text-secondary">Cột mốc đáng nhớ trên suốt hành trình 20 năm xây dựng và phát triển</p>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-6 col-lg-3">
-          <a class="card uit-card h-100 text-decoration-none" href="https://www.uit.edu.vn/bai-viet/tong-quan-ve-truong-dh-cong-nghe-thong-tin">
-            <img src="https://www.uit.edu.vn/media/740215593_1000874972575871_5368889140275719740_n_1_ca47231baf.jpg" class="card-img-top" alt="Tổng quan về Trường ĐH Công nghệ Thông tin">
-            <div class="card-body"><h3 class="h6 fw-bold m-0">Tổng quan về Trường ĐH Công nghệ Thông tin</h3></div>
-          </a>
-        </div>
-        <div class="col-6 col-lg-3">
-          <a class="card uit-card h-100 text-decoration-none" href="https://www.uit.edu.vn/bai-viet/tam-nhin-su-mang-va-gia-tri-cot-loi">
-            <img src="https://www.uit.edu.vn/media/tamnhin_sumang_02_02_01_01_7de9eeb938.jpg" class="card-img-top" alt="Tầm nhìn, Sứ mạng và Giá trị cốt lõi">
-            <div class="card-body"><h3 class="h6 fw-bold m-0">Tầm nhìn, Sứ mạng và Giá trị cốt lõi</h3></div>
-          </a>
-        </div>
-        <div class="col-6 col-lg-3">
-          <a class="card uit-card h-100 text-decoration-none" href="https://www.uit.edu.vn/bai-viet/co-cau-to-chuc">
-            <img src="https://www.uit.edu.vn/media/image_c688fa93b3.png" class="card-img-top" alt="Sơ đồ cơ cấu tổ chức">
-            <div class="card-body"><h3 class="h6 fw-bold m-0">Sơ đồ cơ cấu tổ chức</h3></div>
-          </a>
-        </div>
-        <div class="col-6 col-lg-3">
-          <a class="card uit-card h-100 text-decoration-none" href="https://www.uit.edu.vn/bai-viet/nhan-dien-thuong-hieu">
-            <img src="https://www.uit.edu.vn/media/Brand_name_Identity_2c48bee4ad.png" class="card-img-top" alt="Nhận diện thương hiệu">
-            <div class="card-body"><h3 class="h6 fw-bold m-0">Nhận diện thương hiệu</h3></div>
-          </a>
-        </div>
-      </div>
-
-      <!-- Số liệu: điền số thật (trang gốc chạy hiệu ứng đếm) -->
-      <div class="uit-stats rounded-4 text-white mt-5 p-4 p-lg-5">
-        <p class="text-center small opacity-75 mb-1">UIT - VNUHCM</p>
-        <h3 class="text-center h4 mb-4">Khám phá các cột mốc</h3>
-        <div class="row text-center g-4">
-          <div class="col-md-4"><div class="display-5 fw-bold">0</div><div>Người học tốt nghiệp</div></div>
-          <div class="col-md-4"><div class="display-5 fw-bold">0</div><div>Bài công bố khoa học cùng nhiều dự án nghiên cứu</div></div>
-          <div class="col-md-4"><div class="display-5 fw-bold">0</div><div>Chương trình đào tạo đạt kiểm định quốc tế</div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= TIN TỨC - HOẠT ĐỘNG ================= -->
-  <section class="py-5 bg-white">
-    <div class="container-xxl">
-      <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2 class="uit-title m-0">Tin tức - Hoạt động</h2>
-        <a href="https://www.uit.edu.vn/search-page" class="uit-more">Xem thêm</a>
-      </div>
-
-      <div class="row g-4">
-        <!-- Tin nổi bật -->
-        <div class="col-lg-7">
-          <a class="card border-0 h-100 text-decoration-none uit-feature" href="https://www.uit.edu.vn/bai-viet/uit-don-tiep-doan-dai-hoc-quoc-gia-saint-petersburg-den-tham-quan-uit-studio">
-            <div class="position-relative">
-              <img src="https://www.uit.edu.vn/media/stu_5_eeeb92e93b.jpg" class="card-img-top rounded-3" alt="UIT Studio">
-              <span class="badge uit-badge position-absolute top-0 start-0 m-3">Mới</span>
+        <!-- ================= BANNER TRƯỢT ================= -->
+        <section id="heroCarousel" class="carousel slide" data-bs-ride="carousel" aria-label="Banner">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
             </div>
-            <div class="card-body px-0">
-              <div class="small text-uit mb-1">Tin UIT · 06/11/2026</div>
-              <h3 class="h5 fw-bold text-dark">UIT đón tiếp đoàn Đại học Quốc gia Saint Petersburg đến tham quan UIT Studio</h3>
-              <p class="text-secondary small mb-0">Chiều ngày 6/11/2026, trường Đại học Công nghệ Thông tin, ĐHQG-HCM (UIT) đón tiếp đoàn công tác Đại học Quốc gia Saint Petersburg (SPbU) đến tham quan UIT Studio. Chuyến thăm nằm trong khuôn khổ chương trình đoàn công tác SPbU đến thăm và làm việc tại Đại học Quốc gia TP.HCM…</p>
+            <div class="carousel-inner">
+                <div class="carousel-item active"><img class="d-block w-100"
+                        src="https://www.uit.edu.vn/media/tamnhin_sumang_02_02_01_01_e7496ca052.png"
+                        alt="Tầm nhìn, sứ mạng"></div>
+                <div class="carousel-item"><img class="d-block w-100"
+                        src="https://www.uit.edu.vn/media/uit_bannerweb_20nam_02_02_01_fc29c35461.png"
+                        alt="UIT 20 - Kiến tạo tương lai số"></div>
+                <div class="carousel-item"><img class="d-block w-100"
+                        src="https://www.uit.edu.vn/media/uit_bannerweb_tuyensinh_02_02_01_7b375db85c.png"
+                        alt="UIT môi trường Đại học đáng mơ ước"></div>
+                <div class="carousel-item"><img class="d-block w-100"
+                        src="https://www.uit.edu.vn/media/uit_bannerweb_gioithieu_02_9ed76ed0ba.jpg" alt="Triết lý">
+                </div>
+                <div class="carousel-item"><img class="d-block w-100"
+                        src="https://www.uit.edu.vn/media/banner_kiem_dinh_ae8a551e0a.png" alt="ASIIN"></div>
+                <div class="carousel-item"><img class="d-block w-100"
+                        src="https://www.uit.edu.vn/media/M01_1043_7dd2d68bd4.jpg" alt="Tuyển dụng đợt 1 năm 2026">
+                </div>
+                <div class="carousel-item"><img class="d-block w-100"
+                        src="https://www.uit.edu.vn/media/a3e02b776dd1e38fbac0_317f2dbcb8.jpg" alt="Ranking"></div>
             </div>
-          </a>
-        </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span><span
+                    class="visually-hidden">Previous slide</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next
+                    slide</span>
+            </button>
+        </section>
 
-        <!-- Danh sách tin -->
-        <div class="col-lg-5">
-          <div class="list-group list-group-flush">
-            <a class="list-group-item list-group-item-action px-0" href="https://www.uit.edu.vn/bai-viet/doan-dai-hoc-thuong-hai-tham-quan-phong-thi-nghiem-vi-mach-tich-hop-chuyen-dung-tai-uit">
-              <div class="small text-uit">Tin UIT · 04/11/2026</div>
-              <div class="fw-semibold">Đoàn Đại học Thượng Hải tham quan Phòng thí nghiệm Vi mạch tích hợp chuyên dụng tại UIT</div>
-            </a>
-            <a class="list-group-item list-group-item-action px-0" href="https://www.uit.edu.vn/bai-viet/sinh-vien-uit-nghien-cuu-cach-hinh-anh-bi-can-thiep-co-the-danh-lua-ai-nhan-dien-vat-the-tu-tren-cao">
-              <div class="small text-uit">Học tập - Nghiên cứu · 04/11/2026</div>
-              <div class="fw-semibold">Sinh viên UIT nghiên cứu cách hình ảnh bị can thiệp có thể đánh lừa AI nhận diện vật thể từ trên cao</div>
-            </a>
-            <a class="list-group-item list-group-item-action px-0" href="https://www.uit.edu.vn/bai-viet/sinh-vien-uit-phat-trien-ai-phat-hien-benh-vong-mac-qua-hinh-anh-dat-do-chinh-xac-9959">
-              <div class="small text-uit">Học tập - Nghiên cứu · 04/11/2026</div>
-              <div class="fw-semibold">Sinh viên UIT phát triển AI phát hiện bệnh võng mạc qua hình ảnh, đạt độ chính xác 99,59%</div>
-            </a>
-            <a class="list-group-item list-group-item-action px-0" href="https://www.uit.edu.vn/bai-viet/sinh-vien-uit-khai-thac-suc-manh-ai-nang-cao-kha-nang-phat-hien-lo-hong-bao-mat-trong-ngon-ngu-lap-trinh-python">
-              <div class="small text-uit">Học tập - Nghiên cứu · 04/11/2026</div>
-              <div class="fw-semibold">Sinh viên UIT khai thác sức mạnh AI nâng cao khả năng phát hiện lỗ hổng bảo mật trong ngôn ngữ lập trình Python</div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <h1 class="visually-hidden">Trường Đại học Công nghệ thông tin - Đại học Quốc gia Thành phố Hồ Chí Minh</h1>
 
-  <!-- ================= SỰ KIỆN ================= -->
-  <section class="py-5 uit-about">
-    <div class="container-xxl">
-      <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2 class="uit-title m-0">Sự kiện</h2>
-        <a href="https://www.uit.edu.vn/hoat-dong-sinh-vien" class="uit-more">Xem thêm</a>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <a class="card uit-card h-100 text-decoration-none" href="https://www.uit.edu.vn/bai-viet/hoat-dong-ren-luyen-suc-khoe-netsec-run-2026">
-            <img src="https://www.uit.edu.vn/media/862763727_1435685378087369_4292323680762426152_n_cropped_9e05dc47bb.jpg" class="card-img-top" alt="NetSec Run 2026">
-            <div class="card-body">
-              <div class="small text-uit mb-1">Hoạt động sinh viên · 04/11/2026 - 15:16</div>
-              <h3 class="h6 fw-bold text-dark">Hoạt động rèn luyện sức khỏe NetSec Run 2026</h3>
-              <p class="small text-secondary mb-0">Bạn đang tìm kiếm cơ hội rèn luyện sức khỏe, tích lũy điểm rèn luyện và rinh về những phần quà độc quyền? NetSec Run 2026 do Liên Chi hội Khoa Mạng máy tính &amp;...</p>
+        <!-- ================= GIỚI THIỆU ================= -->
+        <section class="py-5 bg-white">
+            <div class="container-xxl">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <h2 class="uit-lead mb-3">Nơi đào tạo nguồn nhân lực chất lượng cao, tiên phong trong nghiên cứu
+                            khoa học, đổi mới sáng tạo và chuyển giao công nghệ.</h2>
+                        <p class="text-secondary">Trường Đại học Công nghệ Thông tin – ĐHQG TP.HCM hướng đến việc xây
+                            dựng môi trường học tập và nghiên cứu toàn diện, nơi mỗi sinh viên được phát triển không chỉ
+                            về chuyên môn mà còn về tư duy, kỹ năng và giá trị cộng đồng. Nhà trường đề cao tinh thần
+                            sáng tạo, tự do học thuật, chuyên nghiệp trong mọi hoạt động, đồng thời gắn kết tri thức với
+                            trách nhiệm xã hội – hướng đến sự phát triển bền vững của cộng đồng và đất nước.</p>
+                        <a href="https://www.uit.edu.vn/bai-viet/tong-quan-ve-truong-dh-cong-nghe-thong-tin"
+                            class="btn uit-btn">Tìm hiểu thêm về chúng tôi</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow">
+                            <iframe src="https://www.youtube-nocookie.com/embed/4x8gqJeU5D0?rel=0"
+                                title="Giới thiệu UIT" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a class="card uit-card h-100 text-decoration-none" href="https://www.uit.edu.vn/bai-viet/uit-chinh-thuc-gop-mat-trong-top-7-tiet-muc-cong-dien-tai-lien-hoan-am-nhac-dhqg-hcm-2026">
-            <img src="https://www.uit.edu.vn/media/888089864_2610352122723112_1664112848125057927_n_cropped_04cbeceff4.jpg" class="card-img-top" alt="Liên hoan Âm nhạc ĐHQG-HCM 2026">
-            <div class="card-body">
-              <div class="small text-uit mb-1">Hoạt động sinh viên · 04/11/2026 - 15:05</div>
-              <h3 class="h6 fw-bold text-dark">UIT chính thức góp mặt trong Top 7 tiết mục công diễn tại Liên hoan Âm nhạc ĐHQG-HCM 2026</h3>
-              <p class="small text-secondary mb-0">Vượt qua vòng tranh tài Bảng Chương trình tại Liên hoan Âm nhạc học sinh, sinh viên ĐHQG-HCM 2026, tiết mục “Đi đâu để thấy hoa bay” của Trường Đại học Công...</p>
+        </section>
+
+        <!-- ================= ĐÔI NÉT VỀ UIT ================= -->
+        <section class="py-5 uit-about">
+            <div class="container-xxl">
+                <div class="text-center mb-4">
+                    <h2 class="uit-title">Đôi nét về UIT</h2>
+                    <p class="text-secondary">Cột mốc đáng nhớ trên suốt hành trình 20 năm xây dựng và phát triển</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-6 col-lg-3">
+                        <a class="card uit-card h-100 text-decoration-none"
+                            href="https://www.uit.edu.vn/bai-viet/tong-quan-ve-truong-dh-cong-nghe-thong-tin">
+                            <img src="https://www.uit.edu.vn/media/740215593_1000874972575871_5368889140275719740_n_1_ca47231baf.jpg"
+                                class="card-img-top" alt="Tổng quan về Trường ĐH Công nghệ Thông tin">
+                            <div class="card-body">
+                                <h3 class="h6 fw-bold m-0">Tổng quan về Trường ĐH Công nghệ Thông tin</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <a class="card uit-card h-100 text-decoration-none"
+                            href="https://www.uit.edu.vn/bai-viet/tam-nhin-su-mang-va-gia-tri-cot-loi">
+                            <img src="https://www.uit.edu.vn/media/tamnhin_sumang_02_02_01_01_7de9eeb938.jpg"
+                                class="card-img-top" alt="Tầm nhìn, Sứ mạng và Giá trị cốt lõi">
+                            <div class="card-body">
+                                <h3 class="h6 fw-bold m-0">Tầm nhìn, Sứ mạng và Giá trị cốt lõi</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <a class="card uit-card h-100 text-decoration-none"
+                            href="https://www.uit.edu.vn/bai-viet/co-cau-to-chuc">
+                            <img src="https://www.uit.edu.vn/media/image_c688fa93b3.png" class="card-img-top"
+                                alt="Sơ đồ cơ cấu tổ chức">
+                            <div class="card-body">
+                                <h3 class="h6 fw-bold m-0">Sơ đồ cơ cấu tổ chức</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <a class="card uit-card h-100 text-decoration-none"
+                            href="https://www.uit.edu.vn/bai-viet/nhan-dien-thuong-hieu">
+                            <img src="https://www.uit.edu.vn/media/Brand_name_Identity_2c48bee4ad.png"
+                                class="card-img-top" alt="Nhận diện thương hiệu">
+                            <div class="card-body">
+                                <h3 class="h6 fw-bold m-0">Nhận diện thương hiệu</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Số liệu: điền số thật (trang gốc chạy hiệu ứng đếm) -->
+                <div class="uit-stats rounded-4 text-white mt-5 p-4 p-lg-5">
+                    <p class="text-center small opacity-75 mb-1">UIT - VNUHCM</p>
+                    <h3 class="text-center h4 mb-4">Khám phá các cột mốc</h3>
+                    <div class="row text-center g-4">
+                        <div class="col-md-4">
+                            <div class="display-5 fw-bold">0</div>
+                            <div>Người học tốt nghiệp</div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="display-5 fw-bold">0</div>
+                            <div>Bài công bố khoa học cùng nhiều dự án nghiên cứu</div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="display-5 fw-bold">0</div>
+                            <div>Chương trình đào tạo đạt kiểm định quốc tế</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a class="card uit-card h-100 text-decoration-none" href="https://www.uit.edu.vn/bai-viet/dem-nhac-acoustic-gieo-mam-mung-ngay-nha-giao-viet-nam-2011">
-            <img src="https://www.uit.edu.vn/media/887078425_1130072556647412_4953591523660730898_n_56c1ae2464.jpg" class="card-img-top" alt="Đêm nhạc Acoustic Gieo mầm">
-            <div class="card-body">
-              <div class="small text-uit mb-1">Hoạt động sinh viên · 04/11/2026 - 15:04</div>
-              <h3 class="h6 fw-bold text-dark">Đêm nhạc Acoustic “Gieo mầm” mừng Ngày Nhà giáo Việt Nam 20/11</h3>
-              <p class="small text-secondary mb-0">Có những bài học không chỉ nằm trên trang sách. Có những người thầy, người cô đã âm thầm gieo vào chúng ta niềm tin, ước mơ và cả sự can đảm để bước tiếp trên...</p>
+        </section>
+
+        <!-- ================= TIN TỨC - HOẠT ĐỘNG ================= -->
+        <section class="py-5 bg-white">
+            <div class="container-xxl">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="uit-title m-0">Tin tức - Hoạt động</h2>
+                    <a href="https://www.uit.edu.vn/search-page" class="uit-more">Xem thêm</a>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Tin nổi bật -->
+                    <div class="col-lg-7">
+                        <a class="card border-0 h-100 text-decoration-none uit-feature"
+                            href="https://www.uit.edu.vn/bai-viet/uit-don-tiep-doan-dai-hoc-quoc-gia-saint-petersburg-den-tham-quan-uit-studio">
+                            <div class="position-relative">
+                                <img src="https://www.uit.edu.vn/media/stu_5_eeeb92e93b.jpg"
+                                    class="card-img-top rounded-3" alt="UIT Studio">
+                                <span class="badge uit-badge position-absolute top-0 start-0 m-3">Mới</span>
+                            </div>
+                            <div class="card-body px-0">
+                                <div class="small text-uit mb-1">Tin UIT · 06/11/2026</div>
+                                <h3 class="h5 fw-bold text-dark">UIT đón tiếp đoàn Đại học Quốc gia Saint Petersburg đến
+                                    tham quan UIT Studio</h3>
+                                <p class="text-secondary small mb-0">Chiều ngày 6/11/2026, trường Đại học Công nghệ
+                                    Thông tin, ĐHQG-HCM (UIT) đón tiếp đoàn công tác Đại học Quốc gia Saint Petersburg
+                                    (SPbU) đến tham quan UIT Studio. Chuyến thăm nằm trong khuôn khổ chương trình đoàn
+                                    công tác SPbU đến thăm và làm việc tại Đại học Quốc gia TP.HCM…</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Danh sách tin -->
+                    <div class="col-lg-5">
+                        <div class="list-group list-group-flush">
+                            <a class="list-group-item list-group-item-action px-0"
+                                href="https://www.uit.edu.vn/bai-viet/doan-dai-hoc-thuong-hai-tham-quan-phong-thi-nghiem-vi-mach-tich-hop-chuyen-dung-tai-uit">
+                                <div class="small text-uit">Tin UIT · 04/11/2026</div>
+                                <div class="fw-semibold">Đoàn Đại học Thượng Hải tham quan Phòng thí nghiệm Vi mạch tích
+                                    hợp chuyên dụng tại UIT</div>
+                            </a>
+                            <a class="list-group-item list-group-item-action px-0"
+                                href="https://www.uit.edu.vn/bai-viet/sinh-vien-uit-nghien-cuu-cach-hinh-anh-bi-can-thiep-co-the-danh-lua-ai-nhan-dien-vat-the-tu-tren-cao">
+                                <div class="small text-uit">Học tập - Nghiên cứu · 04/11/2026</div>
+                                <div class="fw-semibold">Sinh viên UIT nghiên cứu cách hình ảnh bị can thiệp có thể đánh
+                                    lừa AI nhận diện vật thể từ trên cao</div>
+                            </a>
+                            <a class="list-group-item list-group-item-action px-0"
+                                href="https://www.uit.edu.vn/bai-viet/sinh-vien-uit-phat-trien-ai-phat-hien-benh-vong-mac-qua-hinh-anh-dat-do-chinh-xac-9959">
+                                <div class="small text-uit">Học tập - Nghiên cứu · 04/11/2026</div>
+                                <div class="fw-semibold">Sinh viên UIT phát triển AI phát hiện bệnh võng mạc qua hình
+                                    ảnh, đạt độ chính xác 99,59%</div>
+                            </a>
+                            <a class="list-group-item list-group-item-action px-0"
+                                href="https://www.uit.edu.vn/bai-viet/sinh-vien-uit-khai-thac-suc-manh-ai-nang-cao-kha-nang-phat-hien-lo-hong-bao-mat-trong-ngon-ngu-lap-trinh-python">
+                                <div class="small text-uit">Học tập - Nghiên cứu · 04/11/2026</div>
+                                <div class="fw-semibold">Sinh viên UIT khai thác sức mạnh AI nâng cao khả năng phát hiện
+                                    lỗ hổng bảo mật trong ngôn ngữ lập trình Python</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </a>
+        </section>
+
+        <!-- ================= SỰ KIỆN ================= -->
+        <section class="py-5 uit-about">
+            <div class="container-xxl">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="uit-title m-0">Sự kiện</h2>
+                    <a href="https://www.uit.edu.vn/hoat-dong-sinh-vien" class="uit-more">Xem thêm</a>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <a class="card uit-card h-100 text-decoration-none"
+                            href="https://www.uit.edu.vn/bai-viet/hoat-dong-ren-luyen-suc-khoe-netsec-run-2026">
+                            <img src="https://www.uit.edu.vn/media/862763727_1435685378087369_4292323680762426152_n_cropped_9e05dc47bb.jpg"
+                                class="card-img-top" alt="NetSec Run 2026">
+                            <div class="card-body">
+                                <div class="small text-uit mb-1">Hoạt động sinh viên · 04/11/2026 - 15:16</div>
+                                <h3 class="h6 fw-bold text-dark">Hoạt động rèn luyện sức khỏe NetSec Run 2026</h3>
+                                <p class="small text-secondary mb-0">Bạn đang tìm kiếm cơ hội rèn luyện sức khỏe, tích
+                                    lũy điểm rèn luyện và rinh về những phần quà độc quyền? NetSec Run 2026 do Liên Chi
+                                    hội Khoa Mạng máy tính &amp;...</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a class="card uit-card h-100 text-decoration-none"
+                            href="https://www.uit.edu.vn/bai-viet/uit-chinh-thuc-gop-mat-trong-top-7-tiet-muc-cong-dien-tai-lien-hoan-am-nhac-dhqg-hcm-2026">
+                            <img src="https://www.uit.edu.vn/media/888089864_2610352122723112_1664112848125057927_n_cropped_04cbeceff4.jpg"
+                                class="card-img-top" alt="Liên hoan Âm nhạc ĐHQG-HCM 2026">
+                            <div class="card-body">
+                                <div class="small text-uit mb-1">Hoạt động sinh viên · 04/11/2026 - 15:05</div>
+                                <h3 class="h6 fw-bold text-dark">UIT chính thức góp mặt trong Top 7 tiết mục công diễn
+                                    tại Liên hoan Âm nhạc ĐHQG-HCM 2026</h3>
+                                <p class="small text-secondary mb-0">Vượt qua vòng tranh tài Bảng Chương trình tại Liên
+                                    hoan Âm nhạc học sinh, sinh viên ĐHQG-HCM 2026, tiết mục “Đi đâu để thấy hoa bay”
+                                    của Trường Đại học Công...</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a class="card uit-card h-100 text-decoration-none"
+                            href="https://www.uit.edu.vn/bai-viet/dem-nhac-acoustic-gieo-mam-mung-ngay-nha-giao-viet-nam-2011">
+                            <img src="https://www.uit.edu.vn/media/887078425_1130072556647412_4953591523660730898_n_56c1ae2464.jpg"
+                                class="card-img-top" alt="Đêm nhạc Acoustic Gieo mầm">
+                            <div class="card-body">
+                                <div class="small text-uit mb-1">Hoạt động sinh viên · 04/11/2026 - 15:04</div>
+                                <h3 class="h6 fw-bold text-dark">Đêm nhạc Acoustic “Gieo mầm” mừng Ngày Nhà giáo Việt
+                                    Nam 20/11</h3>
+                                <p class="small text-secondary mb-0">Có những bài học không chỉ nằm trên trang sách. Có
+                                    những người thầy, người cô đã âm thầm gieo vào chúng ta niềm tin, ước mơ và cả sự
+                                    can đảm để bước tiếp trên...</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <p class="CRE">CRE:
+            <a href="https://www.uit.edu.vn/">UIT-University of Information Technology</a>
+        </p>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="uit-footer text-white pt-5">
+        <div class="container-xxl">
+            <div class="row g-4 pb-4">
+                <div class="col-lg-4">
+                    <img src="https://www.uit.edu.vn/media/Footer_logo_VNA_414199455a.png"
+                        alt="Trường Đại học Công nghệ Thông tin" class="mb-3 uit-footer-logo">
+                    <div class="d-flex gap-3 fs-5">
+                        <a href="https://www.facebook.com/UIT.Fanpage" aria-label="Facebook"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="https://www.youtube.com/@uitchannel" aria-label="YouTube"><i
+                                class="bi bi-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@tuyensinhuit" aria-label="TikTok"><i
+                                class="bi bi-tiktok"></i></a>
+                        <a href="https://www.instagram.com/uituniversity" aria-label="Instagram"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/school/university-of-information-technology"
+                            aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h4 class="h6 fw-bold mb-3">Về chúng tôi</h4>
+                    <ul class="list-unstyled small d-grid gap-2">
+                        <li><a href="https://www.uit.edu.vn/search-page">Tin tức</a></li>
+                        <li><a href="https://www.uit.edu.vn/hoat-dong-sinh-vien">Sự kiện</a></li>
+                        <li><a href="https://www.uit.edu.vn/tuyen-dung">Tuyển dụng</a></li>
+                        <li><a href="https://www.uit.edu.vn/bai-viet/dam-bao-chat-luong">Đảm bảo chất lượng đào tạo</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h4 class="h6 fw-bold mb-3">Truy cập nhanh</h4>
+                    <ul class="list-unstyled small d-grid gap-2">
+                        <li><a href="#">Hệ thống Văn bản</a></li>
+                        <li><a href="https://courses.uit.edu.vn">Hệ thống E-Learning</a></li>
+                        <li><a href="https://thuvien.uit.edu.vn">Thư viện</a></li>
+                        <li><a href="https://alumni.uit.edu.vn">Cựu sinh viên</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4">
+                    <h4 class="h6 fw-bold mb-3">Liên hệ</h4>
+                    <ul class="list-unstyled small d-grid gap-2">
+                        <li><i class="bi bi-geo-alt-fill me-2"></i>Khu đô thị ĐHQG-HCM, Khu phố 9, Phường Linh Xuân,
+                            Thành phố Hồ Chí Minh.</li>
+                        <li><i class="bi bi-telephone-fill me-2"></i>(028) 372 52002</li>
+                        <li><i class="bi bi-telephone-fill me-2"></i>(028) 372 52148</li>
+                        <li><i class="bi bi-envelope-fill me-2"></i>info@uit.edu.vn</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<!-- ================= FOOTER ================= -->
-<footer class="uit-footer text-white pt-5">
-  <div class="container-xxl">
-    <div class="row g-4 pb-4">
-      <div class="col-lg-4">
-        <img src="https://www.uit.edu.vn/media/Footer_logo_VNA_414199455a.png" alt="Trường Đại học Công nghệ Thông tin" class="mb-3 uit-footer-logo">
-        <div class="d-flex gap-3 fs-5">
-          <a href="https://www.facebook.com/UIT.Fanpage" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.youtube.com/@uitchannel" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-          <a href="https://www.tiktok.com/@tuyensinhuit" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
-          <a href="https://www.instagram.com/uituniversity" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-          <a href="https://www.linkedin.com/school/university-of-information-technology" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <div class="uit-copyright text-center small py-3">
+            © Copyright 2025 Trường Đại học Công nghệ Thông tin - ĐHQG-HCM.
         </div>
-      </div>
+    </footer>
 
-      <div class="col-6 col-lg-2">
-        <h4 class="h6 fw-bold mb-3">Về chúng tôi</h4>
-        <ul class="list-unstyled small d-grid gap-2">
-          <li><a href="https://www.uit.edu.vn/search-page">Tin tức</a></li>
-          <li><a href="https://www.uit.edu.vn/hoat-dong-sinh-vien">Sự kiện</a></li>
-          <li><a href="https://www.uit.edu.vn/tuyen-dung">Tuyển dụng</a></li>
-          <li><a href="https://www.uit.edu.vn/bai-viet/dam-bao-chat-luong">Đảm bảo chất lượng đào tạo</a></li>
-        </ul>
-      </div>
-
-      <div class="col-6 col-lg-2">
-        <h4 class="h6 fw-bold mb-3">Truy cập nhanh</h4>
-        <ul class="list-unstyled small d-grid gap-2">
-          <li><a href="#">Hệ thống Văn bản</a></li>
-          <li><a href="https://courses.uit.edu.vn">Hệ thống E-Learning</a></li>
-          <li><a href="https://thuvien.uit.edu.vn">Thư viện</a></li>
-          <li><a href="https://alumni.uit.edu.vn">Cựu sinh viên</a></li>
-        </ul>
-      </div>
-
-      <div class="col-lg-4">
-        <h4 class="h6 fw-bold mb-3">Liên hệ</h4>
-        <ul class="list-unstyled small d-grid gap-2">
-          <li><i class="bi bi-geo-alt-fill me-2"></i>Khu đô thị ĐHQG-HCM, Khu phố 9, Phường Linh Xuân, Thành phố Hồ Chí Minh.</li>
-          <li><i class="bi bi-telephone-fill me-2"></i>(028) 372 52002</li>
-          <li><i class="bi bi-telephone-fill me-2"></i>(028) 372 52148</li>
-          <li><i class="bi bi-envelope-fill me-2"></i>info@uit.edu.vn</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="uit-copyright text-center small py-3">
-    © Copyright 2025 Trường Đại học Công nghệ Thông tin - ĐHQG-HCM.
-  </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
