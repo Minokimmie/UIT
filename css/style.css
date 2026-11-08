@@ -1,0 +1,95 @@
+:root {
+  --uit-topbar: #1c2434;
+  --uit-blue: #3b62b3;
+  --uit-blue-dark: #1e3f87;
+  --uit-navy: #14224a;
+  --uit-orange: #f58220;
+  --uit-border: #e3e8f2;
+  --uit-bg: #f3f6fc;
+}
+
+body { color: #1f2937; }
+a { color: inherit; }
+.text-uit { color: var(--uit-blue); }
+
+/* ===== Top bar ===== */
+.uit-topbar { background: var(--uit-topbar); height: 34px; display: flex; align-items: center; }
+.uit-topbar a:hover { text-decoration: underline !important; }
+.uit-topbar .dropdown-toggle::after { border-top-color: #fff; }
+.uit-flag { width: 16px; height: 11px; background: #da251d; position: relative; display: inline-block; }
+.uit-flag::after { content: "★"; color: #ffde00; font-size: 8px; position: absolute; inset: 0; display: grid; place-items: center; line-height: 1; }
+
+/* ===== Main nav ===== */
+.uit-nav { box-shadow: 0 1px 0 var(--uit-border); padding-block: 0; }
+.uit-nav .nav-link { color: var(--uit-blue); font-weight: 600; padding: 1.1rem 1rem; white-space: nowrap; }
+.uit-nav .nav-link:hover,
+.uit-nav .nav-link.show { color: var(--uit-blue-dark); }
+.uit-nav .dropdown-toggle::after { border-top-color: currentColor; margin-left: .5rem; }
+
+.uit-logo-20 { font-weight: 800; font-size: 34px; line-height: 1; color: #1f4fa3; letter-spacing: -2px; }
+.uit-logo-20 span { color: var(--uit-orange); }
+.uit-logo-text { font-weight: 800; }
+.uit-logo-text small { font-size: 9.5px; color: var(--uit-orange); }
+.uit-logo-text strong { font-size: 12.5px; color: #1f4fa3; }
+
+.uit-nav .dropdown-menu {
+  min-width: 260px;
+  margin-top: 0;
+  border: 1px solid var(--uit-border);
+  border-radius: 0 0 .6rem .6rem;
+  box-shadow: 0 12px 28px rgba(20, 35, 70, .14);
+}
+.uit-nav .dropdown-item { padding: .6rem 1.25rem; font-size: .9rem; color: #334155; white-space: normal; }
+.uit-nav .dropdown-item:hover { background: #f1f5fc; color: var(--uit-blue-dark); }
+.uit-nav .dropdown-header { font-size: .75rem; font-weight: 700; color: #7b8aa6; padding: .6rem 1.25rem .25rem; }
+
+@media (min-width: 992px) {
+  .uit-nav .dropdown:hover > .dropdown-menu { display: block; }
+  .uit-nav .dropdown:hover > .nav-link { color: var(--uit-blue-dark); }
+}
+@media (max-width: 991.98px) {
+  .uit-nav .navbar-collapse { border-top: 1px solid var(--uit-border); max-height: calc(100vh - 90px); overflow-y: auto; }
+  .uit-nav .nav-link { padding: .9rem .5rem; border-bottom: 1px solid var(--uit-border); }
+  .uit-nav .dropdown-menu { box-shadow: none; border: 0; background: #f7f9fd; border-radius: 0; }
+}
+
+/* ===== Banner ===== */
+#heroCarousel .carousel-indicators [data-bs-target] { width: 10px; height: 10px; border-radius: 50%; border: 0; }
+#heroCarousel .carousel-control-prev,
+#heroCarousel .carousel-control-next { width: 6%; }
+
+/* ===== Giới thiệu ===== */
+.uit-lead { font-size: clamp(1.4rem, 2.4vw, 2rem); font-weight: 800; color: var(--uit-navy); line-height: 1.3; }
+.uit-btn { background: var(--uit-blue); color: #fff; font-weight: 600; padding: .7rem 1.5rem; border-radius: 999px; }
+.uit-btn:hover { background: var(--uit-blue-dark); color: #fff; }
+
+/* ===== Tiêu đề section ===== */
+.uit-title { font-weight: 800; color: var(--uit-navy); font-size: clamp(1.5rem, 2.4vw, 2rem); }
+.uit-more { color: var(--uit-blue); font-weight: 600; text-decoration: none; }
+.uit-more:hover { text-decoration: underline; }
+.uit-about { background: var(--uit-bg); }
+
+/* ===== Card ===== */
+.uit-card { border: 1px solid var(--uit-border); border-radius: .9rem; overflow: hidden; color: inherit; transition: box-shadow .2s, transform .2s; }
+.uit-card:hover { box-shadow: 0 10px 24px rgba(20, 35, 70, .12); transform: translateY(-2px); }
+.uit-card .card-img-top { aspect-ratio: 16 / 10; object-fit: cover; }
+.uit-card .card-body { color: var(--uit-navy); }
+
+.uit-feature .card-img-top { aspect-ratio: 16 / 9; object-fit: cover; }
+.uit-badge { background: var(--uit-orange); font-weight: 600; }
+.list-group-item { border-color: var(--uit-border); }
+.list-group-item:hover .fw-semibold { color: var(--uit-blue-dark); }
+
+/* ===== Số liệu ===== */
+.uit-stats { background: linear-gradient(135deg, var(--uit-navy), #2a4f9c); }
+
+/* ===== Footer ===== */
+.uit-footer { background: var(--uit-navy); }
+.uit-footer a { color: #d6def0; text-decoration: none; }
+.uit-footer a:hover { color: #fff; text-decoration: underline; }
+.uit-footer-logo { max-width: 260px; height: auto; }
+.uit-copyright { background: rgba(0, 0, 0, .25); color: #b8c3de; }
+
+@media (prefers-reduced-motion: reduce) {
+  .uit-card { transition: none; }
+}
